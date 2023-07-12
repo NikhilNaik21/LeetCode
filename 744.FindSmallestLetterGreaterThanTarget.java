@@ -1,5 +1,6 @@
 class Solution {
-    public char nextGreatestLetter(char[] letters, char target) {
+    public char nextGreatestLetter(char[] letters, char target) 
+    {
         int length = letters.length;
         if(letters[length-1]<=target)
         {
@@ -14,6 +15,6 @@ class Solution {
             }
         }
         return letters[0];
- }
+     }
 }     
     
