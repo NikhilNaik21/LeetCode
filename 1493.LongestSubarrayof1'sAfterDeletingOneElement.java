@@ -1,5 +1,6 @@
 class Solution {
-    public int longestSubarray(int[] nums) {
+    public int longestSubarray(int[] nums) 
+    {
       int length = nums.length;
      int left=0;
       int count=0;
@@ -17,5 +18,5 @@ class Solution {
       
      }
      return nums.length-left-1;
-}
+    }
 }
