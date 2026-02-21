@@ -2,25 +2,23 @@ using System;
 
 public class Solution {
     public int MaxProfit(int[] prices) {
-
-        int minPrice = int.MaxValue;
-        int maxProfit = 0;
-
-        foreach (int price in prices)
+       int profit = 0;
+        for (int i = 0; i < prices.Length; i++)
         {
-            // Step 1: track lowest price
-            if (price < minPrice)
-                minPrice = price;
+        
+            for (int j = i + 1; j < prices.Length; j++)
+            {
+                int currentProfit = prices[j] - prices[i];
 
-            // Step 2: calculate profit if sold today
-            int profit = price - minPrice;
+                if( currentProfit > profit)
+                {
+                    profit = currentProfit;
+                }    
 
-            // Step 3: update best profit
-            if (profit > maxProfit)
-                maxProfit = profit;
+            }
         }
+        return profit;
 
-        return maxProfit;
     }
 }
 
